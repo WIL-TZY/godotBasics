@@ -1,6 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dftg4ptk3a6tj"]
+[gd_scene load_steps=6 format=3 uid="uid://dftg4ptk3a6tj"]
 
 [ext_resource type="PackedScene" uid="uid://dx0gi6ywsg3tm" path="res://Player/PlayerScene.tscn" id="1_62dvc"]
+[ext_resource type="Script" path="res://Environments/Level1.gd" id="1_wrwb8"]
+[ext_resource type="Texture2D" uid="uid://b8g7kbcg6a11n" path="res://Sprites/Backgrounds/level_1.png" id="2_2vatq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rtyt1"]
 size = Vector2(1152, 67)
@@ -9,6 +11,18 @@ size = Vector2(1152, 67)
 size = Vector2(48, 673.25)
 
 [node name="world" type="Node2D"]
+
+[node name="BG" type="ParallaxBackground" parent="."]
+script = ExtResource("1_wrwb8")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="BG"]
+editor_description = "\"BG\" node is the ParallaxBackground node. It applies the mirror property to the x axis starting from the screen width (640px).
+"
+motion_mirroring = Vector2(640, 0)
+
+[node name="Level1" type="Sprite2D" parent="BG/ParallaxLayer"]
+position = Vector2(320, 240)
+texture = ExtResource("2_2vatq")
 
 [node name="Player" parent="." instance=ExtResource("1_62dvc")]
 position = Vector2(255, 401)

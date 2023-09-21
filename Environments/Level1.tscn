@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://ce2xb4iide4rg"]
+
+[ext_resource type="Script" path="res://Environments/Level1.gd" id="1_6ik4q"]
+[ext_resource type="Texture2D" uid="uid://b8g7kbcg6a11n" path="res://Sprites/Backgrounds/level_1.png" id="1_a7o6p"]
+
+[node name="BG" type="ParallaxBackground"]
+script = ExtResource("1_6ik4q")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+editor_description = "\"BG\" node is the ParallaxBackground node. It applies the mirror property to the x axis starting from the screen width (640px).
+"
+motion_mirroring = Vector2(640, 0)
+
+[node name="Level1" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(320, 240)
+texture = ExtResource("1_a7o6p")
