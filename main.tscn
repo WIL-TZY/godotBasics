@@ -1,10 +1,10 @@
 [gd_scene load_steps=2 format=3 uid="uid://gpbkd8rksctl"]
 
-[ext_resource type="Script" path="res://main.gd" id="1_any2x"]
+[ext_resource type="Script" path="res://Main.gd" id="1_fid8s"]
 
 [node name="Main" type="Node2D"]
 position = Vector2(143, 53)
-script = ExtResource("1_any2x")
+script = ExtResource("1_fid8s")
 
 [node name="playButton" type="Button" parent="."]
 offset_left = 357.0
