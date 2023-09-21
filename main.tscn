@@ -7,15 +7,19 @@ position = Vector2(143, 53)
 script = ExtResource("1_any2x")
 
 [node name="playButton" type="Button" parent="."]
-offset_left = 297.0
+offset_left = 357.0
 offset_top = 267.0
-offset_right = 507.0
+offset_right = 567.0
 offset_bottom = 337.0
 text = "PLAY"
 
 [node name="quitButton" type="Button" parent="."]
-offset_left = 297.0
+offset_left = 356.0
 offset_top = 373.0
-offset_right = 507.0
+offset_right = 566.0
 offset_bottom = 443.0
+tooltip_text = "Botao de sair"
 text = "QUIT"
+
+[connection signal="pressed" from="playButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="quitButton" to="." method="_on_quit_button_pressed"]
