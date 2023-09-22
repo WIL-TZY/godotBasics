@@ -8,17 +8,17 @@ position = Vector2(143, 53)
 script = ExtResource("1_fid8s")
 
 [node name="playButton" type="Button" parent="."]
-offset_left = 70.0
-offset_top = 96.0
-offset_right = 280.0
-offset_bottom = 166.0
+offset_left = -36.0
+offset_top = 62.0
+offset_right = 57.0
+offset_bottom = 93.0
 text = "PLAY"
 
 [node name="quitButton" type="Button" parent="."]
-offset_left = 69.0
-offset_top = 202.0
-offset_right = 279.0
-offset_bottom = 272.0
+offset_left = -36.0
+offset_top = 109.0
+offset_right = 57.0
+offset_bottom = 140.0
 tooltip_text = "Botao de sair"
 text = "QUIT"
 

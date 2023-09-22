@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5bdxttuwike7"
-path="res://.godot/imported/walk_0.png-af99140b840d021b61dc0a7747fd08b8.ctex"
+uid="uid://ctl06b6j47tud"
+path="res://.godot/imported/tileset_cerrado.png-30750457b6caa032426370fdbd4fd546.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Player/walk_0.png"
-dest_files=["res://.godot/imported/walk_0.png-af99140b840d021b61dc0a7747fd08b8.ctex"]
+source_file="res://Sprites/Tilesets/tileset_cerrado.png"
+dest_files=["res://.godot/imported/tileset_cerrado.png-30750457b6caa032426370fdbd4fd546.ctex"]
 
 [params]
 
