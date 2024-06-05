@@ -1,12 +1,16 @@
 extends CharacterBody2D
 
-const SPEED = 150.0
-const JUMP_VELOCITY = -300.0
+@export var speed : float = 150.0
+@export var jump_velocity : float = -300.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
-@onready var anim = get_node("AnimationPlayer")
+@onready var anim = get_node("AnimationPlayer") # Could be $AnimationPlayer too
+
+# Player States (to use later)
+enum e_State { IDLE, WALK, JUMP }
+var current_state : e_State
 
 func _physics_process(delta):
 	# Add the gravity (fall).
@@ -15,7 +19,7 @@ func _physics_process(delta):
 
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY # Velocity here less than 0
+		velocity.y = jump_velocity # Velocity here less than 0
 		anim.play("jump")
 
 	# Get the input direction and handle the movement/deceleration.
@@ -29,12 +33,12 @@ func _physics_process(delta):
 		get_node("AnimatedSprite2D").flip_h = false
 		
 	if direction:
-		velocity.x = direction * SPEED 
+		velocity.x = direction * speed # should add delta here?
 		if velocity.y == 0: # On floor
 			anim.play("walk")
 	else: # Not moving
-		# Changing the velocity's x to 0 in a SPEED amount (to decelerate)
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		# Changing the velocity's x to 0 in a speed amount (to decelerate)
+		velocity.x = move_toward(velocity.x, 0, speed) # should add delta here?
 		if velocity.y == 0: # On floor
 			anim.play("idle")
 	

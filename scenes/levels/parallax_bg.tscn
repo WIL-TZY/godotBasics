@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://ce2xb4iide4rg"]
 
-[ext_resource type="Script" path="res://scenes/levels/level_1.gd" id="1_6ik4q"]
+[ext_resource type="Script" path="res://scenes/levels/parallax_bg.gd" id="1_6ik4q"]
 [ext_resource type="Texture2D" uid="uid://b7lw42vj6nugp" path="res://sprites/backgrounds/level_1.png" id="1_a7o6p"]
 
-[node name="BG" type="ParallaxBackground"]
+[node name="ParallaxBG" type="ParallaxBackground"]
 script = ExtResource("1_6ik4q")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
@@ -11,6 +11,6 @@ editor_description = "\"BG\" node is the ParallaxBackground node. It applies the
 "
 motion_mirroring = Vector2(320, 0)
 
-[node name="Level1" type="Sprite2D" parent="ParallaxLayer"]
+[node name="BackgroundSprite" type="Sprite2D" parent="ParallaxLayer"]
 position = Vector2(160, 120)
 texture = ExtResource("1_a7o6p")

@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dx0gi6ywsg3tm" path="res://scenes/player/player.tscn" id="1_dym7t"]
 [ext_resource type="Texture2D" uid="uid://ctl06b6j47tud" path="res://sprites/tilesets/tileset_cerrado.png" id="2_e6bay"]
-[ext_resource type="PackedScene" uid="uid://ce2xb4iide4rg" path="res://scenes/levels/level_1.tscn" id="3_qocqj"]
+[ext_resource type="PackedScene" uid="uid://ce2xb4iide4rg" path="res://scenes/levels/parallax_bg.tscn" id="3_qocqj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nlcre"]
 texture = ExtResource("2_e6bay")

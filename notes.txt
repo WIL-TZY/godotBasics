@@ -1,1 +1,37 @@
-Just for notes
+# Quick notes
+
+- Declare a var in the start of the script to make it accessible to functions;
+- Use @onready to only initialize a variable when the node it refers to is ready;
+- Method starting with a underline are built in from the engine;
+- Methods used as signals should start with "on_";
+- The _ready() method only runs once, when the node is first created;
+- The _process() method runs every frame;
+
+## Scene Tree
+The scene tree symbolizes the entire three of nodes in a scene, starting from 
+the root in the hierarchy. SceneTree is the class this object belongs.
+
+The method get_tree() stores the current node's scene tree object in a variable.
+
+If you print the scene tree in the console, it might look like this: <SceneTree#24863835209>
+The number after '#' is the object ID.
+
+## Nodes
+
+Everything in Godot is made up of nodes. They're the building blocks of any scene.
+Each node represents a single element of the scene. 
+
+Nodes are organized in the aforementioned tree structure (SceneTree), 
+where each node can have child nodes, creating a parent-child relationship. 
+
+This hierarchy allows for organized and manageable scene structures.
+
+The base class for all nodes is the Node class. 
+
+If you print a node in the console, it might look like this: <Node#24863835209>. 
+
+The method get_node() can be used to store the given node's object in a variable.
+Example: var node = get_node("ParallaxLayer/BackgroundSprite")
+
+To add a node to the scene tree, use the add_child() method.
+
