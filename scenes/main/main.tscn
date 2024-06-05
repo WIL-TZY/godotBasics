@@ -1,12 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://gpbkd8rksctl"]
+[gd_scene load_steps=5 format=3 uid="uid://gpbkd8rksctl"]
 
 [ext_resource type="Script" path="res://scenes/main/main.gd" id="1_6est2"]
+[ext_resource type="PackedScene" uid="uid://dftg4ptk3a6tj" path="res://scenes/world/world.tscn" id="2_4abn5"]
 [ext_resource type="PackedScene" uid="uid://ce2xb4iide4rg" path="res://scenes/levels/parallax_bg.tscn" id="2_ugxsv"]
 [ext_resource type="FontFile" uid="uid://dxbg8oddqh26p" path="res://fonts/enter_command.ttf" id="2_x0gpe"]
 
 [node name="Main" type="Node2D"]
 position = Vector2(143, 53)
 script = ExtResource("1_6est2")
+next_scene = ExtResource("2_4abn5")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
