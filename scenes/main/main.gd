@@ -13,5 +13,5 @@ func _on_quit_button_pressed():
 	scene.quit()
 #----------
 func _on_play_button_pressed():
-	scene.change_scene_to_file("res://World.tscn")
+	scene.change_scene_to_file("res://scenes/world/world.tscn")
 #----------
